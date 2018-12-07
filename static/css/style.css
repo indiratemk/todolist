@@ -1,0 +1,212 @@
+body {
+    background:#F2F3F8;
+    font-family: 'Roboto', sans-serif;
+    color: #434343;
+}
+
+.main-content {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.header__title {
+    font-weight: 700;
+    font-size: 1.5em;
+    margin-right: 30px;
+}
+.search-form {
+    display: flex;
+    position: relative;
+    margin-left: 30px;
+}
+.search {
+    height: 38px;
+    outline: none;
+    border: none;
+    padding-left: 10px;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+    border-radius: 5px;
+    width: 430px;
+}
+.search-button {
+    width: 100px;
+    height: 38px;
+    background: #56CEA2;
+    border: none;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    left: 330px;
+}
+.tasks-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.task-content {
+    display: flex;
+    position: relative;
+    margin-bottom: 20px;
+}
+.task-content:nth-child(3n+1) {
+    margin-left: 0;
+    margin-right: 20px;
+}
+.task-content:nth-child(3n) {
+    margin-right: 0;
+    margin-left: 20px;
+}
+.vertical-line {
+    height: 180px;
+    border-radius: 3px 0 0 3px;
+    position: absolute;
+}
+.done {
+    border-left: 5px solid green;
+}
+.task-item {
+    width: 320px;
+    height: 180px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+    border-radius: 3px;
+}
+.task-item__title {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.task-item__description {
+    margin-left: 20px;
+    color: darkgray;
+    margin-top: 10px;
+    height: 40px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.task-item__buttons {
+    display: flex;
+    margin-left: 20px;
+
+}
+.button {
+    text-decoration: none;
+    width: auto;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+}
+.add-button {
+    background: #56CEA2;
+}
+
+.update-button {
+    background: #fd9644;
+}
+.update-button:hover {
+    background: #E87E2A;
+}
+.remove-button {
+    background: #e55039;
+    margin-left: 10px;
+}
+.remove-button:hover {
+    background: #B83F2C;
+}
+.done-button {
+    margin-left: 10px;
+    background: #56CEA2;
+}
+.done-button:hover {
+    background: #60BC9A;
+}
+.done-task {
+    text-decoration: line-through;
+    color: darkgray;
+}
+.undone-button {
+    margin-left: 10px;
+    background: #e55039;
+}
+.undone-button:hover {
+    background: #B83F2C;
+}
+.input-form {
+    background: #fff;
+    width: 500px;
+    height: 450px;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+}
+.form-title {
+    padding-top: 15px;
+}
+
+.form-control {
+    height: 45px;
+    width: 400px;
+    padding-left: 10px;
+    outline: none;
+    border-radius: 4px;
+    border: none;
+    background:#F2F3F8;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+.form-group {
+    margin-bottom: 25px;
+}
+.input-description {
+    height: 100px;
+    padding-top: 10px;
+}
+.submit-button {
+    width: 200px;
+    height: 40px;
+    background: #56CEA2;
+    border: none;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+    border-radius: 3px;
+    cursor: pointer;
+    outline: none;
+}
+
+.add-button:hover, .submit-button:hover, .search-button:hover {
+    background: #60BC9A;
+}
+
+select{
+    display: block;
+    height: 45px;
+    width: 200px;
+    margin-left: 45px;
+    padding-left: 10px;
+    outline: none;
+    border-radius: 4px;
+    border: none;
+    background:#F2F3F8;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}

@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block page %}
+    <div class="main-content">
+        <div class="header">
+            <p class="header__title">Tasks Board</p>
+            <a href="{% url 'add' %}" class="button add-button">Create task</a>
+            <form method="get" action="{% url 'search' %}">
+                <div class="search-form">
+                        <input type="search" name="title" class="search">
+                        <button class="search-button">Search</button>
+                </div>
+            </form>
+        </div>
+        <div class="tasks-container">
+            {% for task in tasks %}
+            <div class="task-content">
+                <div class="task-item" style="border-top: 6px solid {{ task.color.code }}">
+                    {% if not task.is_done %}
+                    <p class="task-item__title">{{ task.title }}</p>
+                    <p class="task-item__description">{{ task.description }}</p>
+                    <div class="task-item__buttons">
+                        <a href="{% url 'update' task.id %}" class="button update-button"><i class="fas fa-edit"></i></a>
+                        <a href="{% url 'delete' task.id %}" class="button remove-button"><i class="fas fa-trash-alt"></i></a>
+                        <a href="{% url 'task-complete' task.id %}" class="button done-button">Done</a>
+                    </div>
+                    {% endif %}
+                    {% if task.is_done %}
+                        <p class="task-item__title done-task">{{ task.title }}</p>
+                        <p class="task-item__description done-task">{{ task.description }}</p>
+                        <div class="task-item__buttons">
+                            <a href="{% url 'update' task.id %}" class="button update-button"><i class="fas fa-edit"></i></a>
+                            <a href="{% url 'delete' task.id %}" class="button remove-button"><i class="fas fa-trash-alt"></i></a>
+                            <a href="{% url 'task-complete' task.id %}" class="button undone-button">Undone</a>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}
