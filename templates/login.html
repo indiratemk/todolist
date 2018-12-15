@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block page %}
+    <div class="form-login">
+        <h2 class="form-title">Login</h2>
+        <form method="get" class="add-form" action="{% url 'sign_in' %}">
+            <div class="form-group">
+                <input type="text" class="form-control input-title" name="login" id="login" placeholder="Login"
+                       required>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control input-title" name="password" id="password"
+                       placeholder="Password" required>
+            </div>
+          <button type="submit" class="submit-button">Sign In</button>
+        </form>
+    </div>
+{% endblock %}

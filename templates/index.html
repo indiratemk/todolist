@@ -10,6 +10,7 @@
                         <button class="search-button">Search</button>
                 </div>
             </form>
+            <a href="{% url 'sign_out' %}" class="button remove-button logout">Log out</a>
         </div>
         <div class="tasks-container">
             {% for task in tasks %}

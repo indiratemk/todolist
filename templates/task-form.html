@@ -13,8 +13,19 @@
                           id="description" placeholder="Description" required>{{ task.description }}</textarea>
             </div>
             <div class="form-group input-colors">
-                {{ form.color }}
+                <select name="color" required id="id_color">
+                    <option value="" disabled {% ifequal task None %}selected{% endifequal %}>Choose color</option>
+                    {% for color in colors %}
+                        <option value="{{ color.id }}"
+                                {% ifequal task.color_id color.id %}selected{% endifequal %}>{{ color.color_title }}</option>
+                    {% endfor %}
+                </select>
             </div>
+
+            <select name="user" required id="id_user" style="display: none">
+                <option value="{{ user_id }}" selected>{{ user_id }}</option>
+            </select>
+
           <button type="submit" class="submit-button">Submit</button>
         </form>
     </div>
